@@ -13,7 +13,7 @@ import lombok.AllArgsConstructor;
 import page.lobanov.jfuture2019.mapper.TitleCrewCsvMapper;
 import page.lobanov.jfuture2019.model.TitleCrew;
 import page.lobanov.jfuture2019.repository.TitleCrewRepository;
-import page.lobanov.jfuture2019.service.GzipCsvReader;
+import page.lobanov.jfuture2019.service.CsvReader;
 
 import static java.util.stream.Collectors.toList;
 
@@ -24,7 +24,7 @@ import static java.util.stream.Collectors.toList;
 @AllArgsConstructor
 public class TitleCrewCsvRepository implements TitleCrewRepository {
 
-    private GzipCsvReader csvReader;
+    private CsvReader csvReader;
 
     @Override
     public Map<String, Set<String>> getDirectorToTitleIdsMap(Collection<String> titleIds) {

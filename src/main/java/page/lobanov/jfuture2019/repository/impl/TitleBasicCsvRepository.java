@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 import page.lobanov.jfuture2019.mapper.TitleBasicCsvMapper;
 import page.lobanov.jfuture2019.model.TitleBasic;
 import page.lobanov.jfuture2019.repository.TitleBasicRepository;
-import page.lobanov.jfuture2019.service.GzipCsvReader;
+import page.lobanov.jfuture2019.service.CsvReader;
 
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
@@ -23,7 +23,7 @@ import static java.util.stream.Collectors.toSet;
 @AllArgsConstructor
 public class TitleBasicCsvRepository implements TitleBasicRepository {
 
-    private GzipCsvReader csvReader;
+    private CsvReader csvReader;
 
     @Override
     public Set<String> getMoviesTitleIds() {

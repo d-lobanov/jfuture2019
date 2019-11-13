@@ -12,7 +12,7 @@ import page.lobanov.jfuture2019.repository.impl.TitleAkasCsvRepository;
 import page.lobanov.jfuture2019.repository.impl.TitleBasicCsvRepository;
 import page.lobanov.jfuture2019.repository.impl.TitleCrewCsvRepository;
 import page.lobanov.jfuture2019.repository.impl.TitleRatingCsvRepository;
-import page.lobanov.jfuture2019.service.GzipCsvReader;
+import page.lobanov.jfuture2019.service.CsvReader;
 import page.lobanov.jfuture2019.service.TitleStatisticService;
 import page.lobanov.jfuture2019.service.TopDirectorsService;
 import page.lobanov.jfuture2019.service.impl.GzipCsvFileReader;
@@ -57,7 +57,7 @@ class ServiceLocator {
         return new TitleRatingCsvRepository(gzipCsvReader(DataSetPath.TITLE_RATINGS));
     }
 
-    private GzipCsvReader gzipCsvReader(DataSetPath dataSetPath) {
+    private CsvReader gzipCsvReader(DataSetPath dataSetPath) {
         return isSourceLocal ? new GzipCsvFileReader(dataSetPath.getLocalPath()) : new GzipCsvWebReader(dataSetPath.getUrl());
     }
 

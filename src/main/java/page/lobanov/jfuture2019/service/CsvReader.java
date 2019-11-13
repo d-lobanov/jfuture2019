@@ -7,7 +7,7 @@ import java.util.stream.Stream;
  * @author Dmitry Lobanov
  * @since 13.11.2019
  */
-public interface GzipCsvReader {
+public interface CsvReader {
 
     String VALUES_SEPARATOR = "\t";
 

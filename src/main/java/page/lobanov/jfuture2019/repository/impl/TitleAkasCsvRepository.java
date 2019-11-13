@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 import page.lobanov.jfuture2019.mapper.TitleAkasCsvMapper;
 import page.lobanov.jfuture2019.model.TitleAkas;
 import page.lobanov.jfuture2019.repository.TitleAkasRepository;
-import page.lobanov.jfuture2019.service.GzipCsvReader;
+import page.lobanov.jfuture2019.service.CsvReader;
 
 /**
  * @author Dmitry Lobanov
@@ -19,7 +19,7 @@ import page.lobanov.jfuture2019.service.GzipCsvReader;
 @AllArgsConstructor
 public class TitleAkasCsvRepository implements TitleAkasRepository {
 
-    private GzipCsvReader csvReader;
+    private CsvReader csvReader;
 
     @Override
     public List<TitleAkas> getAllByRegionsAndTitleIds(Set<String> regions, Set<String> titleIds) {

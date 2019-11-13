@@ -11,14 +11,14 @@ import java.util.stream.Stream;
 import java.util.zip.GZIPInputStream;
 
 import lombok.AllArgsConstructor;
-import page.lobanov.jfuture2019.service.GzipCsvReader;
+import page.lobanov.jfuture2019.service.CsvReader;
 
 /**
  * @author Dmitry Lobanov
  * @since 12.11.2019
  */
 @AllArgsConstructor
-public class GzipCsvWebReader implements GzipCsvReader {
+public class GzipCsvWebReader implements CsvReader {
 
     private String spec;
 

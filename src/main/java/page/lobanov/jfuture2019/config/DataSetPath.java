@@ -1,7 +1,6 @@
 package page.lobanov.jfuture2019.config;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 
 /**
  * @author Dmitry Lobanov
@@ -16,7 +15,6 @@ public enum DataSetPath {
     TITLE_CREW("title.crew.tsv.gz"),
     TITLE_RATINGS("title.ratings.tsv.gz");
 
-    @Getter
     private String fileName;
 
     public String getLocalPath() {

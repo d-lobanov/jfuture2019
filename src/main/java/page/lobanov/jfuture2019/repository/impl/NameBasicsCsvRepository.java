@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import page.lobanov.jfuture2019.mapper.NameBasicsCsvMapper;
 import page.lobanov.jfuture2019.model.NameBasics;
 import page.lobanov.jfuture2019.repository.NameBasicsRepository;
-import page.lobanov.jfuture2019.service.GzipCsvReader;
+import page.lobanov.jfuture2019.service.CsvReader;
 
 import static java.util.stream.Collectors.toMap;
 
@@ -20,7 +20,7 @@ import static java.util.stream.Collectors.toMap;
 @AllArgsConstructor
 public class NameBasicsCsvRepository implements NameBasicsRepository {
 
-    private GzipCsvReader csvReader;
+    private CsvReader csvReader;
 
     @Override
     public Map<String, String> getNameIdsToPrimaryNameMap(Set<String> titleIds) {

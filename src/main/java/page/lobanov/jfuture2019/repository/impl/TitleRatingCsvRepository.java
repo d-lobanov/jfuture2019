@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import page.lobanov.jfuture2019.mapper.TitleRatingCsvMapper;
 import page.lobanov.jfuture2019.model.TitleRating;
 import page.lobanov.jfuture2019.repository.TitleRatingRepository;
-import page.lobanov.jfuture2019.service.GzipCsvReader;
+import page.lobanov.jfuture2019.service.CsvReader;
 
 import static java.util.stream.Collectors.toMap;
 
@@ -20,7 +20,7 @@ import static java.util.stream.Collectors.toMap;
 @AllArgsConstructor
 public class TitleRatingCsvRepository implements TitleRatingRepository {
 
-    private GzipCsvReader csvReader;
+    private CsvReader csvReader;
 
     @Override
     public Map<String, TitleRating> getTitleIdToTitleRatingMap(Set<String> titleIds, int minNumberOfVoters) {

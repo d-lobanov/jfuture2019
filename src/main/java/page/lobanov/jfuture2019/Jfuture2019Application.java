@@ -20,8 +20,13 @@ public class Jfuture2019Application {
 
         ServiceLocator serviceLocator = new ServiceLocator(isSourceLocal);
 
+        System.out.println("Task #1: display dynamics of the release of movies of 5 any genres of China and US");
+
         List<TitleStatistic> statistics = serviceLocator.titleStatisticService().getStatistics();
         printTable(List.of("REGION", "GENRE", "YEAR", "NUMBER OF MOVIES"), fromTitleStatisticList(statistics));
+
+        System.out.println();
+        System.out.println("Task #2: top 5 directors");
 
         List<DirectorRating> ratings = serviceLocator.topDirectorsService().getTop();
         printTable(List.of("NAME", "AVERAGE RATING", "NUMBER OF MOVIES"), fromDirectorRatingList(ratings));
